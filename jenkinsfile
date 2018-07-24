@@ -7,4 +7,6 @@ stage 'test'
 sh 'mvn test'
 stage 'package'
 sh 'mvn package'
+stage 'install'
+sh 'mvn install'
 }
