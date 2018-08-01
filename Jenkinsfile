@@ -5,6 +5,7 @@ checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleC
 }
 stage ('compile')
 {
+  mvnHome = tool 'apache-maven-3.5.0'
 sh 'mvn compile'
 }
 stage ('test')
