@@ -5,19 +5,18 @@ checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleC
 }
 stage ('compile')
 {
-  mvnHome = tool 'apache-maven-3.5.0'
-sh 'mvn compile'
+ echo "compile the code"
 }
 stage ('test')
 {
-sh 'mvn test'
+echo "test the code"
 }
 stage ('package')
 {
-sh 'mvn package'
+  echo "package the code"
 }
 stage ('install')
 {
-sh 'mvn install'
+echo "install the code"
 }
 }
